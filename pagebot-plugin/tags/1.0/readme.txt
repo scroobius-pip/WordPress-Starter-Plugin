@@ -1,18 +1,26 @@
 === PageBot ===
-Contributors: 
-Donate link: 
-Tags: chatbot, ai
+Contributors: cejink
+Tags: chatbot, customer support, ai, customer service
 Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: trunk
-Requires PHP: 5.4
+Tested up to: 6.3.2
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-PageBot is a customer service agent powered by GPT technology that understands your website's content and knowledge base. 
+Reduce support tickets and increase customer satisfaction with PageBot, a customer service agent powered by GPT technology that understands your website's content and knowledge base. 
 
 
 == Description ==
+
+## This is For You If:
+1. You want to spend more time on your products over handling customer service
+
+2. You want to provide your visitors __instant__ responses to their questions. __24/7, 365__
+
+3. You want to reduce support tickets on trivial questions. Answer up to 70% of your customer questions with PageBot.
+
+4. You want to proactively collect customer's email details for later
+
 
 PageBot is a GPT-powered chatbot that offers a range of features to enhance customer service on your website. Some of its key features include:
 1. __Engaging and pleasant conversations__: PageBot provides instant responses to customer questions based on your website's content and any additional data you provide
@@ -27,13 +35,6 @@ PageBot is a GPT-powered chatbot that offers a range of features to enhance cust
 
 7. __Usage-based billing__: PageBot offers a pricing model based on usage, allowing you to pay only for the messages you use beyond the free plan.
 
-## This is For You If:
-1. You want to spend more time on your products over handling customer service
-
-2. You want to provide your visitors instant responses to their questions
-
-3. You want to reduce support tickets on trivial questions.
-
 
 
 == Installation ==
@@ -41,14 +42,15 @@ PageBot is a GPT-powered chatbot that offers a range of features to enhance cust
 1. Install and activate plugin.
 
 2. Login to [thepagebot.com/dashboard](thepagebot.com/dashboard)
-3. Copy your pagebot id:
-[
+3. Copy your pagebot id: [screenshot](pgbt_id.png)
+4. Head to your wordpress admin panel, Settings > PageBot Settings: [screenshot](settings.png)
+
 
 == Frequently Asked Questions ==
 
 = How much does this cost ? =
 
-Pagebot is free for 50 messages monthly. And costs $0.05 per message after
+Pagebot is free for 50 messages monthly. And costs $0.05 per message after.
 
 = How can i reach you ? =
 
@@ -57,11 +59,14 @@ contact@thepagebot.com
 
 == Screenshots ==
 
-1. screenshot
-2. This is the second screen shot
+1. Landing Page landingpage.png
+2. Screenshot 1 screenshot_1.png
+3. Screenshot 2 screenshot_2.png
+4. Screenshot 3 screenshot_3.png
+5. Animation jump animation_jump_combined.gif
+
 
 == Changelog ==
-
+1.0: Initial release
 
 == Upgrade Notice ==
-

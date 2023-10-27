@@ -1,15 +1,13 @@
 === PageBot ===
-Contributors: 
-Donate link: 
-Tags: chatbot, ai
+Contributors: cejink
+Tags: chatbot, customer support, ai, customer service
 Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: trunk
-Requires PHP: 5.4
+Tested up to: 6.3.2
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-PageBot is a customer service agent powered by GPT technology that understands your website's content and knowledge base. 
+Reduce support tickets and increase customer satisfaction with PageBot, a customer service agent powered by GPT technology that understands your website's content and knowledge base. 
 
 
 == Description ==
@@ -41,8 +39,9 @@ PageBot is a GPT-powered chatbot that offers a range of features to enhance cust
 1. Install and activate plugin.
 
 2. Login to [thepagebot.com/dashboard](thepagebot.com/dashboard)
-3. Copy your pagebot id: [https://imagedelivery.net/y45xHmEkXDWfOcNHu7OOpA/adc548a6-3b86-4fd0-84a2-88f4e6909100/public](pagebot id)
-4. Paste your pagebot id in the plugin settings page at `Settings > PageBot`
+3. Copy your pagebot id: [screenshot](pgbt_id.png)
+4. Head to your wordpress admin panel, Settings > PageBot Settings: [screenshot](settings.png)
+
 
 == Frequently Asked Questions ==
 
@@ -57,11 +56,14 @@ contact@thepagebot.com
 
 == Screenshots ==
 
-1. screenshot
-2. This is the second screen shot
+1. Landing Page landingpage.png
+2. Screenshot 1 screenshot_1.png
+3. Screenshot 2 screenshot_2.png
+4. Screenshot 3 screenshot_3.png
+5. Animation jump animation_jump.gif
+6. This is the second screen shot
 
 == Changelog ==
-
+1.0: Initial release
 
 == Upgrade Notice ==
-

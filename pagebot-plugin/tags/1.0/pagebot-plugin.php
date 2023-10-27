@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: PageBot Plugin
+ * Plugin Name: PageBot
  * Plugin URI: https://thepagebot.com
  * Description: Handle customer support with a GPT powered AI ChatBot.
  * Author: PageBot
