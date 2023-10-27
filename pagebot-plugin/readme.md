@@ -41,8 +41,8 @@ PageBot is a GPT-powered chatbot that offers a range of features to enhance cust
 1. Install and activate plugin.
 
 2. Login to [thepagebot.com/dashboard](thepagebot.com/dashboard)
-3. Copy your pagebot id: [https://imagedelivery.net/y45xHmEkXDWfOcNHu7OOpA/adc548a6-3b86-4fd0-84a2-88f4e6909100/public](pagebot id)
-4. Paste your pagebot id in the plugin settings page at `Settings > PageBot`
+3. Copy your pagebot id:
+[
 
 == Frequently Asked Questions ==
 

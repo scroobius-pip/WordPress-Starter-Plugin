@@ -3,8 +3,8 @@
  * Plugin Name: PageBot Plugin
  * Plugin URI: https://thepagebot.com
  * Description: Handle customer support with a GPT powered AI ChatBot.
- * Author: SimdiJinkins
- * Author URI: https://twitter.com/nintharc
+ * Author: PageBot
+ * Author URI: https://twitter.com/pagebotai
  * Version: 1.0
  * Text Domain: starter-plugin
  * Domain Path: /languages
@@ -128,8 +128,9 @@ function pagebot_plugin_settings_page() {
             <?php do_settings_sections('pagebot-plugin-settings-group'); ?>
             <table class="form-table">
                 <tr valign="top">
-                    <th scope="row">YOUR_ID</th>
+                    <th scope="row">PGBT ID</th>
                     <td>
+						<p>Enter your PageBot ID. You can find it at <a href="https://thepagebot.com/dashboard" target="_blank">thepagebot.com/dashboard</a>.</p>
                         <input type="text" name="your_id" value="<?php echo esc_attr(get_option('your_id')); ?>" />
                     </td>
                 </tr>
@@ -147,19 +148,20 @@ function pagebot_plugin_settings_page() {
                 <thead>
                     <tr>
                         <th>URL or Text</th>
-                        <th>Expires (optional)</th>
+                        <th>Expires Seconds (optional)</th>
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <?php foreach ($sources as $index => $source) : ?>
-                        <tr>
-                            <td><input type="text" name="pgbt_sources[<?php echo $index; ?>][url]" value="<?php echo esc_attr($source['url']); ?>" /></td>
-                            <td><input type="text" name="pgbt_sources[<?php echo $index; ?>][expires]" value="<?php echo esc_attr($source['expires']); ?>" /></td>
-                            <td><button type="button" onclick="removeRow(this);">Remove</button></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
+				<tbody>
+    <?php foreach ($sources as $index => $source) : ?>
+        <tr>
+            <td><input type="text" name="pgbt_sources[<?php echo $index; ?>][url]" value="<?php echo isset($source['url']) ? esc_attr($source['url']) : ''; ?>" /></td>
+            <td><input type="text" name="pgbt_sources[<?php echo $index; ?>][expires]" value="<?php echo isset($source['expires']) ? esc_attr($source['expires']) : ''; ?>" /></td>
+            <td><button type="button" onclick="removeRow(this);">Remove</button></td>
+        </tr>
+    <?php endforeach; ?>
+</tbody>
+
             </table>
             <button type="button" onclick="addRow();">Add Source</button>
             <?php submit_button(); ?>
@@ -189,6 +191,9 @@ function my_script_plugin_settings() {
 }
 
 function sanitize_pgbt_sources($sources) {
+	if (!is_array($sources)) {
+		$sources = [];
+	}
     foreach ($sources as $index => $source) {
         if (isset($source['url'])) {
             $sources[$index]['url'] = sanitize_text_field($source['url']);
@@ -219,6 +224,9 @@ function add_my_meta_tags() {
         $sources = [];
     }
     foreach ($sources as $source) {
+		if (!isset($source['url']) && !isset($source['expires'])) {
+			continue;
+		}
         if (isset($source['url'])) {
             $url = esc_attr($source['url']);
         } else {
@@ -230,6 +238,21 @@ function add_my_meta_tags() {
     }
 }
 
+
+function pagebot_plugin_activation() {
+    // Check if it's a network-wide activation
+    if (isset($_GET['networkwide']) && ($_GET['networkwide'] == 1)) {
+        return;
+    }
+
+    // Redirect to the dashboard
+    wp_redirect('https://thepagebot.com?wordpress=true');
+    exit;  // Always call exit after wp_redirect
+}
+
+// register_activation_hook(__FILE__, 'pagebot_plugin_activation');
+// The format is plugin_action_links_[plugin file name]
+ 
 
 add_action('wp_head', 'add_my_script');
 add_action('wp_head', 'add_my_meta_tags');
